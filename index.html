@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Random Password Generator</title>
+  <script src="libraries/p5.min.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+
+
+  <script src="sketch.js" type="text/javascript"></script>
+
+  <script>
+    function myFunction() {
+      var copyText = document.getElementById("list");
+      copyText.select();
+      document.execCommand("Copy");
+      alert("Copied!");
+    }
+  </script>
+
+  <style>
+    .step_1 {
+      font-size: 24pt;
+      background-color: #AA3939;
+      color: #FFF;
+      padding: 24pt;
+    }
+
+    .step_1:hover {
+      font-size: 24pt;
+      background-color: #D46A6A;
+      color: #FFF;
+    }
+
+    .step_2 {
+      font-size: 24pt;
+      background-color: #7B9F35;
+      color: #FFF;
+      padding: 24pt;
+    }
+
+    .step_2:hover {
+      font-size: 24pt;
+      background-color: #A5C663;
+      color: #FFF;
+    }
+
+    .step_3 {
+      font-size: 24pt;
+      background-color: #226666;
+      color: #FFF;
+      padding: 24pt;
+    }
+
+    .step_3:hover {
+      font-size: 24pt;
+      background-color: #407F7F;
+      color: #FFF;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="step_1" id="div1">
+    1. Select the character set you'd like your passwords to contain.
+  </div>
+  <div class="step_2" id="div2">
+    2. Set the desired length of your passwords.
+    <BR>
+  </div>
+
+  <div class="step_3" id="div3">
+    3. Copy your generated passwords to clipboard.
+    <BR>
+<BR>
+    <div>
+      <textarea id="list" rows="8">
+  output
+</textarea></div>
+
+    <button id="btnCopy" onclick="myFunction()">Copy text</button>
+    <BR>
+  </div>
+
+</body>
+
+</html>
